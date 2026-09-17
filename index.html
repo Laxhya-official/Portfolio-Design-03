@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Interactive IT Support Engineer portfolio for enterprise and MNC technology professionals."
+  />
+  <meta name="theme-color" content="#08110f" />
+  <title>Jordan Lee | IT Support Engineer</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="pointer-glow" id="pointerGlow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <a href="#home" class="brand" aria-label="Go to home">
+        <span class="brand-orb" aria-hidden="true"></span>
+        <span id="brandName">Jordan Lee</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta magnetic">Let's talk <span>↗</span></a>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="availabilityText">Open to enterprise IT support opportunities</span>
+          </div>
+
+          <p class="hero-kicker reveal">Enterprise IT Support · Service Operations · Automation</p>
+
+          <h1 class="reveal">
+            Keeping people productive and
+            <span class="gradient-text">technology dependable.</span>
+          </h1>
+
+          <div class="role-line reveal">
+            <span class="role-prefix">I work as</span>
+            <span class="role-value" id="roleValue" aria-live="polite">IT Support Engineer</span>
+          </div>
+
+          <p class="hero-description reveal" id="heroDescription">
+            I support users, endpoints, cloud services and business-critical tools with a calm, structured and improvement-focused approach.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary magnetic" href="#experience">View experience <span>↗</span></a>
+            <a class="btn btn-secondary magnetic" href="#projects">Support projects</a>
+            <a class="btn btn-ghost magnetic" href="#" id="resumeButton" download hidden>Resume ↓</a>
+          </div>
+
+          <div class="hero-tags reveal" id="heroTags"></div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="portrait-stage">
+            <div class="portrait-frame tilt-panel">
+              <img class="profile-photo" id="profilePhoto" alt="" hidden />
+
+              <div class="profile-photo-fallback" id="profilePhotoFallback" aria-hidden="true">
+                <span id="profileInitials">JL</span>
+                <small>IT Support</small>
+              </div>
+
+              <div class="portrait-overlay" aria-hidden="true"></div>
+
+              <div class="portrait-topline">
+                <span>01 / Profile</span>
+                <span class="portrait-availability"><i aria-hidden="true"></i> Available</span>
+              </div>
+
+              <div class="portrait-caption">
+                <strong id="profilePhotoName">Jordan Lee</strong>
+                <span id="profileLocation">London, United Kingdom</span>
+              </div>
+            </div>
+
+            <div class="portrait-outline" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-label="Technology areas">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="container about-grid">
+        <div class="section-intro reveal">
+          <span class="eyebrow">About me</span>
+          <h2>Support that solves today's issue and improves tomorrow's experience.</h2>
+        </div>
+
+        <div class="about-content reveal">
+          <div class="about-copy" id="aboutCopy"></div>
+          <div class="about-metrics" id="aboutMetrics"></div>
+        </div>
+      </div>
+
+      <div class="container principles-grid" id="principlesGrid"></div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Experience</span>
+            <h2>Enterprise support experience, clearly presented.</h2>
+          </div>
+          <p>
+            A practical view of the environments supported, technologies used and improvements delivered.
+          </p>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-rail reveal" id="experienceRail"></div>
+          <div class="experience-detail reveal" id="experienceDetail"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <div class="section-heading reveal light-heading">
+          <div>
+            <span class="eyebrow">Skills & support stack</span>
+            <h2>Built for modern MNC support environments.</h2>
+          </div>
+          <p>
+            Core tools and capabilities grouped by the support work they enable.
+          </p>
+        </div>
+
+        <div class="skill-toolbar reveal" id="skillFilters"></div>
+        <div class="skills-grid reveal" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Projects & improvements</span>
+            <h2>Show the work behind better support.</h2>
+          </div>
+          <p>
+            Selected automation, service improvement and operational work with measurable outcomes.
+          </p>
+        </div>
+
+        <div class="project-toolbar reveal" id="projectFilters"></div>
+        <div class="projects-grid reveal" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="achievements">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Achievements & certifications</span>
+            <h2>Proof of learning, ownership and impact.</h2>
+          </div>
+          <p>
+            Certifications, recognition and milestones that support the experience above.
+          </p>
+        </div>
+
+        <div class="achievement-layout">
+          <div class="achievement-feature reveal" id="achievementFeature"></div>
+          <div class="achievement-list reveal" id="achievementList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-shell reveal">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact me</span>
+          <h2>Need someone who can troubleshoot, communicate and improve?</h2>
+          <p id="contactMessage">
+            I am open to conversations about IT support, service operations, endpoint, cloud and technology support opportunities.
+          </p>
+
+          <div class="contact-direct" id="contactDirect"></div>
+          <div class="contact-socials" id="contactSocials"></div>
+        </div>
+
+        <div class="form-panel">
+          <div class="form-head">
+            <span class="mini-label">Direct message</span>
+            <h3>Send a message</h3>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="from_name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="from_email" placeholder="you@example.com" required />
+              </label>
+
+              <label class="full-field">
+                <span>Company / organisation</span>
+                <input type="text" name="company" placeholder="Optional" />
+              </label>
+
+              <label class="full-field">
+                <span>Message</span>
+                <textarea name="message" rows="6" placeholder="Tell me about the opportunity or project..." required></textarea>
+              </label>
+
+              <input class="trap-field" type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-footer">
+              <span id="formStatus">Configure EmailJS in config.js, or use the email fallback.</span>
+              <button type="submit" class="btn btn-primary magnetic" id="sendButton">Send message <span>↗</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <strong id="footerName">Jordan Lee</strong>
+        <span>IT Support Portfolio</span>
+      </div>
+      <p>© <span id="footerYear"></span> · Built for reliable support.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close project details">×</button>
+      <span class="eyebrow" id="modalType"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-grid" id="modalHighlights"></div>
+      <div class="tag-list" id="modalTags"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
